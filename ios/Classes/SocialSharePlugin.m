@@ -95,7 +95,7 @@
           [self facebookShareLink:call.arguments[@"quote"] url:call.arguments[@"url"]];
           result(nil);
       } else {
-          NSString *fbLink = [@"https://www.facebook.com/sharer.php?url=" stringByAppendingString:[self facebookShareLink:call.arguments[@"url"]]];
+          NSString *fbLink = [@"https://www.facebook.com/sharer.php?url=" stringByAppendingString:[self url:call.arguments[@"url"]]];
           if (@available(iOS 10.0, *)) {
               [[UIApplication sharedApplication] openURL:[NSURL URLWithString:fbLink] options:@{} completionHandler:^(BOOL success) {}];
           } else {
