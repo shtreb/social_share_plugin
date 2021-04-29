@@ -194,7 +194,7 @@ public class SocialSharePlugin
     }
 
     private void openFacebookMobileUrl(String url) {
-            final Uri playStoreUri = Uri.parse("https://www.facebook.com/sharer.php?url=" + url);
+            final Uri playStoreUri = Uri.parse("https://www.facebook.com/sharer.php?u=" + url);
             final Intent intent = new Intent(Intent.ACTION_VIEW, playStoreUri);
             activity.startActivity(intent);
     }
